@@ -1,0 +1,557 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Raleway", sans-serif;
+}
+
+.nav {
+  z-index: 1;
+  position: fixed;
+  height: 10vh;
+  width: 100%;
+  display: flex;
+  background: #fff;
+  justify-content: space-between;
+  align-items: center;
+}
+.nav-logo {
+  margin-left: 10%;
+}
+.nav-menu {
+  display: flex;
+  list-style: none;
+  text-transform: uppercase;
+  margin-right: 10%;
+}
+.nav-menu li {
+  margin: 0 10px;
+  padding: 5px 0;
+  font-weight: 700;
+  border-top: 2px solid rgba(255, 96, 51, 0);
+  transition: border 0.4s;
+}
+.nav-menu li:hover {
+  border-top: 2px solid #ff6033;
+  cursor: pointer;
+}
+.nav .hamburgerMenu {
+  display: none;
+}
+
+.header {
+  height: 90vh;
+  width: 100%;
+  padding-top: 10vh;
+  background: url("../../img/header.jpg");
+  background-size: 80%;
+  background-repeat: no-repeat;
+  background-position: center;
+  position: relative;
+}
+.header .headerContent {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 40%;
+  padding: 9% 0 0 10%;
+}
+.header .headerContent h2 {
+  font-size: 50px;
+  margin: 0 0 20px 0;
+}
+.header .scroll {
+  position: absolute;
+  left: 50%;
+  bottom: 5%;
+  animation: scrollJump 2s infinite;
+}
+
+.aboutUs {
+  width: 100%;
+  background: #00b1b1;
+  display: flex;
+  padding: 3% 0;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+}
+.aboutUs-leftSection, .aboutUs-rightSection {
+  width: 35%;
+}
+.aboutUs img {
+  width: 100%;
+}
+
+.services {
+  width: 100%;
+  padding: 3% 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  background: #70bfff;
+}
+.services-leftSection {
+  width: 600px;
+}
+.services-rightSection {
+  margin: 0 0 0 15%;
+  width: 30%;
+  height: 700px;
+  background: url("../../img/tomato.png");
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+}
+
+.button {
+  border: none;
+  color: #fff;
+  box-shadow: 0px 3px 5px #8d8d8d;
+  padding: 5% 10%;
+  transition: 0.3s background;
+}
+.button--orange {
+  background: #ff6033;
+  text-transform: uppercase;
+  position: relative;
+  top: 20px;
+}
+.button--orange:hover {
+  background: #ff501f;
+  cursor: pointer;
+}
+.button--services {
+  color: #000;
+  font-weight: 700;
+  font-size: 25px;
+  width: 100%;
+  height: 100px;
+  display: flex;
+  padding: 0;
+  background: #fff;
+  margin: 5% 0;
+}
+.button--services .buttonServiceText {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 85%;
+  height: 100%;
+  text-align: center;
+  border-right: 1px solid #9d9d9d;
+  padding: 20px 0;
+}
+.button--services .buttonServiceIcon {
+  padding: 5%;
+}
+.button--gallery, .button--blog {
+  text-transform: uppercase;
+  padding: 1% 2%;
+  font-size: 22px;
+}
+.button--gallery {
+  background: #5685a3;
+}
+.button--gallery:hover {
+  background: #4f7a96;
+}
+.button--blog {
+  background: #f82b3c;
+}
+.button--blog:hover {
+  background: #f7172a;
+}
+
+.gallery {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 3% 0;
+  background: #fee92e;
+}
+.galleryArticle {
+  width: 40%;
+  text-align: center;
+}
+
+.subscribe {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background: url("../../img/sub.jpg");
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  padding: 8% 0;
+  padding-left: 10%;
+}
+.subscribeArticle {
+  width: 40%;
+}
+.subscribeHeader {
+  font-size: 48px;
+}
+.subscribeInput {
+  width: 40%;
+  padding: 1%;
+  font-size: 18px;
+  border: 1px solid #000;
+}
+.subscribe input[type=submit] {
+  border: none;
+  background: #97ba2c;
+  color: #fff;
+  box-shadow: 0px 3px 5px #8d8d8d;
+  font-size: 18px;
+  padding: 1% 2%;
+  font-family: "Raleway", sans-serif;
+  text-transform: uppercase;
+  margin-left: 1%;
+  transition: 0.3s background;
+}
+.subscribe input[type=submit]:hover {
+  background: #8aaa28;
+  cursor: pointer;
+}
+
+.blog {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  background: #b07cf8;
+  padding: 3% 0;
+  color: #fff;
+}
+.blogArticle {
+  width: 40%;
+  text-align: center;
+}
+.blogPostWrapper {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+.blogPostWrapper .blogPost {
+  width: 360px;
+  height: 300px;
+  position: relative;
+  background-size: cover;
+}
+.blogPostWrapper .blogPost--1 {
+  background: url("../../img/blog_1.jpg");
+}
+.blogPostWrapper .blogPost--2 {
+  background: url("../../img/blog_2.jpg");
+}
+.blogPostWrapper .blogPost--3 {
+  background: url("../../img/blog_3.jpg");
+}
+.blogPostWrapper .blogPost .postDate, .blogPostWrapper .blogPost .postTitle, .blogPostWrapper .blogPost .postAuthor {
+  position: absolute;
+  left: 5%;
+}
+.blogPostWrapper .blogPost .postDate {
+  width: 80px;
+  text-align: center;
+  top: 5%;
+  font-size: 30px;
+  font-weight: 700;
+  text-transform: uppercase;
+  padding: 2%;
+  border-radius: 5%;
+  background: rgba(0, 0, 0, 0.4);
+  line-height: 25px;
+}
+.blogPostWrapper .blogPost .postDate--month {
+  font-size: 20px;
+}
+.blogPostWrapper .blogPost .postTitle {
+  bottom: 20%;
+  font-size: 20px;
+  font-weight: 700;
+}
+.blogPostWrapper .blogPost .postAuthor {
+  bottom: 5%;
+  font-size: 12px;
+}
+
+.contact {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  background: url("../../img/contact.jpg");
+  background-size: cover;
+  background-position: center;
+  padding: 3% 0;
+}
+.contactArticle {
+  width: 40%;
+  text-align: center;
+}
+.contact .contactFormWrapper {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+.contact .contactFormWrapper .contactForm {
+  display: flex;
+  flex-direction: column;
+  width: 30%;
+  color: #fff;
+}
+.contact .contactFormWrapper .contactForm .formMe {
+  width: 100%;
+  background: #00c4c4;
+  border-left: 6px solid #355b82;
+  font-weight: 700;
+}
+.contact .contactFormWrapper .contactForm input, .contact .contactFormWrapper .contactForm textarea, .contact .contactFormWrapper .contactForm .formMe {
+  padding: 2%;
+  margin: 2% 0;
+  font-size: 20px;
+}
+.contact .contactFormWrapper .contactForm input, .contact .contactFormWrapper .contactForm textarea {
+  color: #fff;
+  background: rgba(0, 196, 196, 0.4);
+  border: none;
+}
+.contact .contactFormWrapper .contactForm input::placeholder, .contact .contactFormWrapper .contactForm textarea::placeholder {
+  color: #fff;
+}
+.contact .contactFormWrapper .contactTypeTitle {
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 20px;
+  margin-top: 10%;
+}
+.contact .contactFormWrapper .contactTypeDescription {
+  font-size: 18px;
+}
+
+.articleHeader {
+  font-size: 80px;
+  margin: 0 0 20px 0;
+}
+
+p {
+  line-height: 160%;
+}
+
+a {
+  text-decoration: none;
+}
+
+.flex-col {
+  display: flex;
+  flex-direction: column;
+}
+
+.flex-row {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+@keyframes scrollJump {
+  33% {
+    bottom: 5%;
+  }
+  66% {
+    bottom: 7%;
+  }
+  100% {
+    bottom: 5%;
+  }
+}
+@media screen and (max-width: 780px) {
+  .nav {
+    z-index: 1;
+    position: fixed;
+  }
+  .nav-logo {
+    z-index: 3;
+  }
+  .nav-menu {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    margin-top: 10vh;
+    top: -105vh;
+    background: #fff;
+    transition: 0.6s cubic-bezier(0.22, 1.74, 0.5, 0.67);
+    z-index: 1;
+  }
+  .nav-menu li {
+    text-align: center;
+    padding: 6% 0;
+    width: 100%;
+    border: none;
+  }
+  .nav-menu li:hover {
+    border: none;
+  }
+  .nav .menuActive {
+    top: -2.1vh;
+  }
+  .nav .hamburgerMenu {
+    display: block;
+    font-size: 40px;
+    position: absolute;
+    right: 3%;
+    z-index: 2;
+  }
+
+  .header {
+    padding: 0 5%;
+    padding-top: 10vh;
+  }
+  .header .headerContent {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+  }
+
+  .aboutUs {
+    width: 100%;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    padding: 7% 3%;
+  }
+  .aboutUs-leftSection {
+    display: none;
+  }
+  .aboutUs-rightSection {
+    width: 100%;
+  }
+  .aboutUs img {
+    width: 80%;
+  }
+
+  .subscribeHeader, .articleHeader {
+    font-size: 50px;
+    text-align: center;
+  }
+
+  .services {
+    padding: 0 3%;
+  }
+  .services-leftSection {
+    width: 600px;
+    order: 1;
+  }
+  .services-rightSection {
+    margin: 0;
+    height: 200px;
+  }
+
+  .gallery {
+    padding: 7% 3%;
+  }
+  .galleryArticle {
+    width: 100%;
+    text-align: left;
+  }
+
+  .subscribe {
+    padding: 7% 3%;
+  }
+  .subscribeArticle {
+    width: 100%;
+  }
+  .subscribe form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .subscribeInput {
+    width: 100%;
+    padding: 1%;
+    font-size: 18px;
+    border: 1px solid #000;
+    margin-top: 5%;
+  }
+  .subscribe input[type=submit] {
+    margin: 5% 0 0 0;
+    transition: 0.3s background;
+  }
+  .subscribe input[type=submit]:hover {
+    background: #8aaa28;
+    cursor: pointer;
+  }
+
+  .blog {
+    padding: 7% 3%;
+  }
+  .blogArticle {
+    width: 100%;
+  }
+
+  .contact {
+    padding: 7% 3%;
+  }
+  .contactArticle {
+    width: 100%;
+  }
+  .contactInfo {
+    width: 100%;
+  }
+  .contact .contactFormWrapper {
+    width: 100%;
+    flex-wrap: wrap;
+  }
+  .contact .contactFormWrapper .contactTypeTitle {
+    margin-top: 2%;
+  }
+  .contact .contactFormWrapper .contactForm {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 1109px) {
+  .services {
+    padding: 0 3%;
+  }
+  .services-leftSection {
+    width: 800px;
+    order: 1;
+  }
+  .services-rightSection {
+    margin: 0;
+    height: 400px;
+  }
+}
+@media screen and (max-width: 1319px) {
+  .flex-row {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .flex-row figure img {
+    width: 100%;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */
